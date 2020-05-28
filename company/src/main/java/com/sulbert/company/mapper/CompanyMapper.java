@@ -1,7 +1,7 @@
 package com.sulbert.company.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sulbert.domain.company.Company;
+import com.sulbert.company.entity.Company;
 import org.springframework.stereotype.Repository;
 
 /**

@@ -14,6 +14,7 @@
         <module>common</module>
         <module>common_model</module>
         <module>company</module>
+        <module>api</module>
     </modules>
 
     <name>hrm</name>

@@ -1,4 +1,4 @@
-package com.sulbert.domain.company;
+package com.sulbert.company.entity;
 
 import lombok.Data;
 
@@ -10,7 +10,7 @@ import java.util.Date;
  * Date: 2020/5/18
  */
 @Data
-public class Company implements Serializable {
+public class Company extends BaseEntity {
     private String id;
     private String name;
     private String managerId; //企业登录账号id
@@ -29,6 +29,5 @@ public class Company implements Serializable {
     private String auditState; //审核状态
     private Integer state;
     private Double balance;
-    private Date CreateTime;
 
 }

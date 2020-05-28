@@ -1,7 +1,7 @@
 package com.sulbert.company;
 
 import com.sulbert.company.mapper.CompanyMapper;
-import com.sulbert.domain.company.Company;
+import com.sulbert.company.entity.Company;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

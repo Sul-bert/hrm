@@ -22,8 +22,17 @@ public class CompanyDaoTest {
     private CompanyMapper companyMapper;
 
     @Test
-    public void test(){
+    public void getById(){
         Company company = companyMapper.selectById("123");
         System.out.println(company);
+    }
+
+    @Test
+    public void save(){
+        Company company = new Company();
+        company.setBalance(1000d);
+        company.setName("小米");
+        company.setMailbox("123@163.com");
+        companyMapper.insert(company);
     }
 }

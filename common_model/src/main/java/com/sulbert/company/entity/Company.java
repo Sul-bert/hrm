@@ -1,17 +1,17 @@
 package com.sulbert.company.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Author: Sulbert
  * Date: 2020/5/18
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class Company extends BaseEntity {
-    private String id;
     private String name;
     private String managerId; //企业登录账号id
     private String version; // 当前版本

@@ -1,5 +1,7 @@
 package com.sulbert.company.entity;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,13 +10,12 @@ import java.util.Date;
  * Date: 2020/5/28
  * Description:
  */
+@Data
 public class BaseEntity implements Serializable {
 
-    private String id;
-
-    private boolean deleted;
-
-    private Date createdDate;
+    String id;
+    boolean deleted;
+    Date createdDate;
 
 
 

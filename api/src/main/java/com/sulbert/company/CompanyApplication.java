@@ -1,8 +1,10 @@
 package com.sulbert.company;
 
+import com.sulbert.common.utils.IdWorker;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 /**
  * Author: Sulbert
@@ -14,5 +16,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CompanyApplication {
     public static void main(String[] args) {
         SpringApplication.run(CompanyApplication.class,args);
+    }
+
+    @Bean
+    public IdWorker idWorker(){
+        return new IdWorker();
     }
 }

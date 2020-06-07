@@ -15,7 +15,7 @@ public class BaseEntity implements Serializable {
 
     String id;
     boolean deleted;
-    Date createdDate;
+    Date createDate;
 
 
 

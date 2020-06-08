@@ -18,10 +18,5 @@ public class CompanyController {
     @Resource
     private CompanyMapper companyMapper;
 
-    @RequestMapping("hello")
-    public String hello(){
-        return "hello hrm";
-    }
-
 
 }

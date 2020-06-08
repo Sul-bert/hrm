@@ -151,4 +151,67 @@
             </if>
         </trim>
     </insert>
+    <update id="delete" parameterType="java.lang.String">
+        update company set deleted = true where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateById" parameterType="com.sulbert.company.entity.Company">
+        update company
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="managerId != null">
+                manager_id = #{managerId},
+            </if>
+            <if test="version != null">
+                version = #{version},
+            </if>
+            <if test="renewalDate != null">
+                renewal_date = #{renewalDate},
+            </if>
+            <if test="expirationDate != null">
+                expiration_date = #{expirationDate},
+            </if>
+            <if test="companyArea != null">
+                company_area = #{companyArea},
+            </if>
+            <if test="companyAddress != null">
+                company_address = #{companyAddress},
+            </if>
+            <if test="businessLicenseId != null">
+                business_license_id = #{businessLicenseId},
+            </if>
+            <if test="legalRepresentative != null">
+                legal_representative = #{legalRepresentative},
+            </if>
+            <if test="companyPhone != null">
+                company_phone = #{companyPhone},
+            </if>
+            <if test="mailbox != null">
+                mailbox = #{mailbox},
+            </if>
+            <if test="companySize != null">
+                company_size = #{companySize},
+            </if>
+            <if test="industry != null">
+                industry = #{industry},
+            </if>
+            <if test="remarks != null">
+                remarks = #{remarks},
+            </if>
+            <if test="auditState != null">
+                auditState = #{auditState},
+            </if>
+            <if test="state != null">
+                state = #{state},
+            </if>
+            <if test="balance != null">
+                balance = #{balance},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+    <select id="selectById" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from company where id = #{id,jdbcType=VARCHAR}
+    </select>
 </mapper>

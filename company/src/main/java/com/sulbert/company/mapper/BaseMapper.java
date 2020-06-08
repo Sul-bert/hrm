@@ -15,5 +15,5 @@ public interface BaseMapper<T extends BaseEntity> {
 
     void updateById(T t);
 
-    T get(String id);
+    T selectById(String id);
 }

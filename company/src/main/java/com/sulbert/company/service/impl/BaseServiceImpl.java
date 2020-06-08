@@ -39,6 +39,6 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
 
     @Override
     public T get(String id) {
-        return getMapper().get(id);
+        return getMapper().selectById(id);
     }
 }

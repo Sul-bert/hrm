@@ -7,6 +7,8 @@ import com.sulbert.company.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * Author: Sulbert
  * Date: 2020/6/5
@@ -15,7 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CompanyServiceImpl extends BaseServiceImpl<Company> implements CompanyService {
 
-    @Autowired
+    @Resource
     private CompanyMapper companyMapper;
 
     BaseMapper<Company> getMapper(){
@@ -28,13 +30,13 @@ public class CompanyServiceImpl extends BaseServiceImpl<Company> implements Comp
     }
 
     @Override
-    public void deleteById(String id) {
-        super.deleteById(id);
+    public void delete(String id) {
+        super.delete(id);
     }
 
     @Override
-    public void updateById(Company t) {
-        super.updateById(t);
+    public void update(Company t) {
+        super.update(t);
     }
 
     @Override

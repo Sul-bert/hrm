@@ -6,9 +6,9 @@ public interface BaseService<T extends BaseEntity> {
 
     void save(T t);
 
-    void deleteById(String id);
+    void delete(String id);
 
-    void updateById(T t);
+    void update(T t);
 
     T get(String Id);
 

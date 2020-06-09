@@ -154,7 +154,7 @@
     <update id="delete" parameterType="java.lang.String">
         update company set deleted = true where id = #{id,jdbcType=VARCHAR}
     </update>
-    <update id="updateById" parameterType="com.sulbert.company.entity.Company">
+    <update id="update" parameterType="com.sulbert.company.entity.Company">
         update company
         <set>
             <if test="name != null">
@@ -211,7 +211,7 @@
         </set>
         where id = #{id}
     </update>
-    <select id="selectById" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <select id="select" parameterType="java.lang.String" resultMap="BaseResultMap">
         select * from company where id = #{id,jdbcType=VARCHAR}
     </select>
 </mapper>

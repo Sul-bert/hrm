@@ -28,17 +28,17 @@ public abstract class BaseServiceImpl<T extends BaseEntity> implements BaseServi
     }
 
     @Override
-    public void deleteById(String id) {
-        getMapper().deleteById(id);
+    public void delete(String id) {
+        getMapper().delete(id);
     }
 
     @Override
-    public void updateById(T t) {
-        getMapper().updateById(t);
+    public void update(T t) {
+        getMapper().update(t);
     }
 
     @Override
     public T get(String id) {
-        return getMapper().selectById(id);
+        return getMapper().select(id);
     }
 }

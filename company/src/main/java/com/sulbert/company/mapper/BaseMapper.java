@@ -11,9 +11,9 @@ public interface BaseMapper<T extends BaseEntity> {
 
     void insert(T t);
 
-    void deleteById(String id);
+    void delete(String id);
 
-    void updateById(T t);
+    void update(T t);
 
-    T selectById(String id);
+    T select(String id);
 }

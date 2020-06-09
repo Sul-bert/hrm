@@ -6,9 +6,9 @@ public interface CompanyService extends BaseService<Company> {
 
     void save(Company company);
 
-    void deleteById(String id);
+    void delete(String id);
 
-    void updateById(Company company);
+    void update(Company company);
 
     Company get(String Id);
 }
